@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BintraySample/BintraySample.iml" filepath="$PROJECT_DIR$/BintraySample/BintraySample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daya-bintray-core/daya-bintray-core.iml" filepath="$PROJECT_DIR$/daya-bintray-core/daya-bintray-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daya-bintray-sample.iml" filepath="$PROJECT_DIR$/daya-bintray-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/daya-bintray-sdk/daya-bintray-sdk.iml" filepath="$PROJECT_DIR$/daya-bintray-sdk/daya-bintray-sdk.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1 @@
+include ':BintraySample', ':daya-bintray-sdk', ':daya-bintray-core'
