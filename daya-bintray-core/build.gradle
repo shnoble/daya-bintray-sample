@@ -8,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "0.0.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -29,3 +29,21 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     testCompile 'junit:junit:4.12'
 }
+
+project.ext {
+    groupId = 'com.daya'
+    artifactId = 'daya-bintray-core'
+    versionName = android.defaultConfig.versionName
+
+    siteUrl = 'https://github.com/shnoble/daya-android-library'
+    gitUrl = 'https://github.com/shnoble/daya-android-library.git'
+    issuesUrl = 'https://github.com/shnoble/daya-android-library/issues'
+
+    description = "Daya Bintray Core Module"
+
+    bintrayRepo = 'DayaBintraySdk'
+    bintrayUserOrg = 'daya'
+    bintrayLabels = ['aar', 'android', 'example']
+}
+
+apply from: "${rootDir}/publish.gradle"

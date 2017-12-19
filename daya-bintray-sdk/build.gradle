@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 26
@@ -10,7 +8,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "0.0.1"
+        versionName "0.0.3"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -29,50 +27,26 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testCompile 'junit:junit:4.12'
+
     compile project(':daya-bintray-core')
 }
 
-//apply from: 'publish.gradle'
+project.ext {
+    groupId = 'com.daya'
+    artifactId = 'daya-bintray-sdk'
+    versionName = android.defaultConfig.versionName
 
-group = 'com.daya'
-version = '0.0.1'
+    siteUrl = 'https://github.com/shnoble/daya-android-library'
+    gitUrl = 'https://github.com/shnoble/daya-android-library.git'
+    issuesUrl = 'https://github.com/shnoble/daya-android-library/issues'
 
-install {
-    repositories.mavenInstaller {
-        pom.project {
-            name 'DayaBintraySdk'
-            description 'Daya Bintray SDK'
-            url 'https://github.com/shnoble/daya-android-library'
-            inceptionYear '2017' // release date
+    description = "Daya Bintray Sdk"
 
-            // gradle dependency
-            // ex) compile 'tech.thdev:bintray-sample:0.0.1'
-            packaging 'aar'
-            groupId 'com.daya' // compile 'tech.thdev:
-            artifactId 'daya-bintray-sdk' // :bintray-sample:
-            version '0.0.1' // :0.0.1-alpha
-
-            licenses {
-                license {
-                    name 'The Apache Software License, Version 2.0'
-                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    distribution 'repo'
-                }
-            }
-
-            scm { // Optional setting
-                connection 'https://github.com/shnoble/daya-android-library.git'
-                developerConnection 'https://github.com/shnoble/daya-android-library'
-                url 'https://github.com/shnoble/daya-android-library'
-            }
-
-            developers { // Optional setting
-                developer {
-                    id 'daya'
-                    name 'shnoble'
-                    email 'shnoble79@gmail.com'
-                }
-            }
-        }
-    }
+    bintrayRepo = 'DayaBintraySdk'
+    bintrayUserOrg = 'daya'
+    bintrayLabels = ['aar', 'android', 'example']
 }
+
+apply from: "${rootDir}/publish.gradle"
+
+

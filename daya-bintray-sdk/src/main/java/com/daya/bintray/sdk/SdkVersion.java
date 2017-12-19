@@ -10,4 +10,8 @@ public class SdkVersion {
     public static String getVersion() {
         return BuildConfig.VERSION_NAME;
     }
+
+    public static void setVersion(@NonNull String version) {
+
+    }
 }
